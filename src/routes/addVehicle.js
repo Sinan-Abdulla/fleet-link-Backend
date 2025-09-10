@@ -2,12 +2,11 @@ const express = require("express");
 const authRouter = express.Router();
 const Vehicle = require("../models/Vehicle");
 
-// POST /api/vehicles - Create a new vehicle
+
 authRouter.post("/vehicles", async (req, res) => {
     try {
         const { name, capacityKg, tyres } = req.body;
 
-        // Validate input (optional but recommended)
         if (!name || !capacityKg || !tyres) {
             return res.status(400).json({ message: "All fields are required" });
         }
