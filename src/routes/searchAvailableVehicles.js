@@ -37,7 +37,6 @@ authRouter.get("/vehicles/available", async (req, res) => {
       }
     }
 
-    console.log('Available Vehicles:', available); 
     res.json(available);
   } catch (error) {
     console.error("Error fetching available vehicles:", error);

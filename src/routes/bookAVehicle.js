@@ -37,7 +37,7 @@ router.post("/bookings", async (req, res) => {
       return res.status(409).json({ message: "Vehicle already booked for this time slot" });
     }
 
-    
+    // 5️⃣ Create booking
     const booking = new Booking({
       vehicleId,
       fromPincode,

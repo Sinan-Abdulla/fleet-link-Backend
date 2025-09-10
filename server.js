@@ -9,8 +9,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173" // Your React frontend URL
+    origin: ["http://localhost:5173", "http://3.106.114.241"], // allow both local and deployed frontend
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 }));
+
 
 
 app.use(express.json());
